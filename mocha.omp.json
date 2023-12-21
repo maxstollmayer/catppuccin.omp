@@ -1,0 +1,186 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "version": 2,
+    "final_space": false,
+    "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+    "palette": {
+        "rosewater": "#F5E0DC",
+        "flamingo": "#F2CDCD",
+        "pink": "#F5C2E7",
+        "mauve": "#CBA6F7",
+        "red": "#F38BA8",
+        "maroon": "#EBA0AC",
+        "peach": "#FAB387",
+        "yellow": "#F9E2AF",
+        "green": "#A6E3A1",
+        "teal": "#94E2D5",
+        "sky": "#89DCEB",
+        "sapphire": "#74C7EC",
+        "blue": "#89B4FA",
+        "lavender": "#B4BEFE",
+        "text": "#CDD6F4",
+        "subtext1": "#BAC2DE",
+        "subtext0": "#A6ADC8",
+        "overlay2": "#9399B2",
+        "overlay1": "#7F849C",
+        "overlay0": "#6C7086",
+        "surface2": "#585B70",
+        "surface1": "#45475A",
+        "surface0": "#313244",
+        "base": "#1E1E2E",
+        "mantle": "#181825",
+        "crust": "#11111B",
+        "true": "p:green",
+        "false": "p:red",
+        "transient": "p:text",
+        "os-fg": "p:rosewater",
+        "os-bg": "p:surface2",
+        "root-fg": "p:base",
+        "root-bg": "p:yellow",
+        "path": "p:peach",
+        "git": "p:lavender",
+        "docker": "p:sapphire",
+        "go": "p:pink",
+        "haskell": "p:pink",
+        "julia": "p:pink",
+        "lua": "p:pink",
+        "python": "p:pink",
+        "rust": "p:pink",
+        "exectime": "p:rosewater"
+    },
+    "transient_prompt": {
+        "foreground": "p:transient",
+        "template": "{{ now | date \"15:04:05\" }} {{ if gt .Code 0 }}<p:false>\u276f</>{{ else }}<p:true>\u276f</>{{ end }} "
+    },
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "os",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b0",
+                    "foreground": "p:os-fg",
+                    "background": "p:os-bg",
+                    "foreground_templates": [
+                        "{{ if .Root }}p:root-fg{{ end }}"
+                    ],
+                    "background_templates": [
+                        "{{ if .Root }}p:root-bg{{ end }}"
+                    ],
+                    "template": " {{ .Icon }} ",
+                    "properties": {
+                        "windows": "\ue70f"
+                    }
+                },
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "foreground": "p:path",
+                    "template": " {{ .Path }} ",
+                    "properties": {
+                        "home_icon": "~",
+                        "folder_icon": "..",
+                        "style": "agnoster_short"
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "foreground": "p:git",
+                    "template": "{{ .HEAD }} ",
+                    "properties": {
+                        "branch_icon": "\ue725 ",
+                        "cherry_pick_icon": "\ue29b ",
+                        "commit_icon": "\uf417 ",
+                        "fetch_status": false,
+                        "fetch_stash_count": false,
+                        "fetch_upstream_icon": false,
+                        "merge_icon": "\ue727 ",
+                        "no_commits_icon": "\uf0c3 ",
+                        "rebase_icon": "\ue728 ",
+                        "revert_icon": "\uf0e2 ",
+                        "tag_icon": "\uf412 "
+                    }
+                },
+                {
+                    "type": "docker",
+                    "style": "plain",
+                    "foreground": "p:docker",
+                    "template": "\uf308 {{ .Context }} "
+                },
+                {
+                    "type": "go",
+                    "style": "plain",
+                    "foreground": "p:go",
+                    "template": "\ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "haskell",
+                    "style": "plain",
+                    "foreground": "p:haskell",
+                    "template": "\ue61f {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "julia",
+                    "style": "plain",
+                    "foreground": "p:julia",
+                    "template": "\ue624 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "lua",
+                    "style": "plain",
+                    "foreground": "p:lua",
+                    "template": "\ue620 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "python",
+                    "style": "plain",
+                    "foreground": "p:python",
+                    "template": "\ue73c {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+                    "properties": {
+                        "display_default": false,
+                        "display_mode": "context"
+                    }
+                },
+                {
+                    "type": "rust",
+                    "style": "plain",
+                    "foreground": "p:rust",
+                    "template": "\ue7a8 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "executiontime",
+                    "style": "plain",
+                    "foreground": "p:exectime",
+                    "template": "\udb81\udd1f {{ .FormattedMs }} ",
+                    "properties": {
+                        "threshold": 500,
+                        "style": "austin"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "status",
+                    "style": "plain",
+                    "foreground": "p:true",
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}p:false{{ end }}"
+                    ],
+                    "template": "\u276f ",
+                    "properties": {
+                        "always_enabled": true
+                    }
+                }
+            ]
+        }
+    ]
+}
