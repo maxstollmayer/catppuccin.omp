@@ -30,7 +30,7 @@
 
 ## Usage
 
-It is assumed that you already have Oh My Posh installed as per its [documentation](https://ohmyposh.dev/docs).
+It is assumed that you already have Oh My Posh installed as per its [documentation](https://ohmyposh.dev/docs) and that your terminal uses a [Nerd font](https://www.nerdfonts.com/). It is recommended that you use the relevant catppuccin flavour for your terminal so that it matches the prompt; see [this list](https://github.com/catppuccin/catppuccin#-ports-and-more) under `🌱 Terminals`.
 
 <details>
 <summary>bash</summary>
