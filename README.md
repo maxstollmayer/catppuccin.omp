@@ -197,7 +197,7 @@ exec zsh
 
 ## Customization
 
-Feel free to customize this theme to your own liking by either cloning the repository or with something like `oh-my-posh config export --output ~/mytheme.omp.json`. If you find a bug or think a feature should be included, do not hesitate to make an issue or a pull request. See the [Oh My Posh documentation](https://ohmyposh.dev/docs/configuration/general) on how to configure a theme.
+Tailor this theme to suit your preferences by either cloning the repository or using a command like `oh-my-posh config export --output ~/mytheme.omp.json`. If you encounter a bug or believe a certain feature should be incorporated, feel free to open an issue or submit a pull request. Consult the [Oh My Posh documentation](https://ohmyposh.dev/docs/configuration/general) for guidance on configuring themes.
 
 &nbsp;
 
