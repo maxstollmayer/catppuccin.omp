@@ -32,24 +32,23 @@
         "crust": "#11111B",
         "true": "p:green",
         "false": "p:red",
-        "transient": "p:text",
+        "time": "p:overlay1",
         "os-fg": "p:base",
-        "os-bg": "p:blue",
+        "os-bg": "p:overlay1",
         "root-fg": "p:base",
-        "root-bg": "p:peach",
+        "root-bg": "p:yellow",
         "path": "p:yellow",
         "git": "p:lavender",
-        "docker": "p:sapphire",
-        "go": "p:pink",
-        "haskell": "p:pink",
-        "julia": "p:pink",
-        "lua": "p:pink",
-        "python": "p:pink",
-        "rust": "p:pink",
-        "exectime": "p:rosewater"
+        "docker": "p:sky",
+        "go": "p:mauve",
+        "haskell": "p:mauve",
+        "julia": "p:mauve",
+        "lua": "p:mauve",
+        "python": "p:mauve",
+        "rust": "p:mauve"
     },
     "transient_prompt": {
-        "foreground": "p:transient",
+        "foreground": "p:time",
         "template": "{{ now | date \"15:04:05\" }} {{ if gt .Code 0 }}<p:false>\u276f</>{{ else }}<p:true>\u276f</>{{ end }} "
     },
     "blocks": [
@@ -154,7 +153,10 @@
                 {
                     "type": "executiontime",
                     "style": "plain",
-                    "foreground": "p:exectime",
+                    "foreground": "p:true",
+                    "foreground_templates": [
+                        "{{ if .Code }}p:false{{ end }}"
+                    ],
                     "template": "\udb81\udd1f {{ .FormattedMs }} ",
                     "properties": {
                         "threshold": 500,
