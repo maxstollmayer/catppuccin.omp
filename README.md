@@ -32,12 +32,12 @@
 
 ## Usage
 
-It is assumed that you already have Oh My Posh installed as per its [documentation](https://ohmyposh.dev/docs) and that your terminal uses a [Nerd font](https://www.nerdfonts.com/). It is recommended that you use the relevant catppuccin flavour for your terminal so that it matches the prompt; see [this list](https://github.com/catppuccin/catppuccin#-ports-and-more) under `🌱 Terminals`.
+Ensure that [Oh My Posh](https://ohmyposh.dev/docs) is installed and your terminal is configured with a [Nerd font](https://www.nerdfonts.com/). For a seamless appearance, we recommend using the corresponding catppuccin flavor for your Terminal, which can be found in [this list](https://github.com/catppuccin/catppuccin#-ports-and-more) under `🌱 Terminals`. Follow the instructions below based on your shell. The examples provided use the mocha flavor; adjust the `--config` value to match the flavor of your choice."
 
 <details>
 <summary>bash</summary>
 
-Adjust the Oh My Posh init line in `~/.bashrc` (could be `~/.profile` or `~/.bash_profile` depending on your environment) by adding the `--config` flag with the catppuccin flavor of your choice. For example the mocha flavor:
+Adjust the Oh My Posh init line in `~/.bashrc` (could be `~/.profile` or `~/.bash_profile` depending on your environment) by adding the `--config` flag with the catppuccin flavor of your choice.
 
 ```shell
 eval "$(oh-my-posh init bash --config 'https://raw.githubusercontent.com/maxstolly/catppuccin.omp/main/mocha.omp.json')"
@@ -53,7 +53,7 @@ exec bash
 <details>
 <summary>cmd</summary>
 
-Adjust the Oh My Posh init line in `oh-my-posh.lua` by adding the `--config` flag with the catppuccin flavor of your choice. For example the mocha flavor:
+Adjust the Oh My Posh init line in `oh-my-posh.lua` by adding the `--config` flag with the catppuccin flavor of your choice.
 
 ```lua
 load(io.popen('oh-my-posh init cmd --config "https://raw.githubusercontent.com/maxstolly/catppuccin.omp/main/mocha.omp.json"'):read("*a"))()
@@ -65,7 +65,7 @@ Once altered, restart cmd for the changes to take effect.
 <details>
 <summary>elvish</summary>
 
-Adjust the Oh My Posh init line in `~/.elvish/rc.elv` by adding the `--config` flag with the catppuccin flavor of your choice. For example the mocha flavor:
+Adjust the Oh My Posh init line in `~/.elvish/rc.elv` by adding the `--config` flag with the catppuccin flavor of your choice.
 
 ```elvish
 eval (oh-my-posh init elvish --config 'https://raw.githubusercontent.com/maxstolly/catppuccin.omp/main/mocha.omp.json')
@@ -81,7 +81,7 @@ exec elvish
 <details>
 <summary>fish</summary>
 
-Adjust the Oh My Posh init line in `~/.config/fish/config.fish` by adding the `--config` flag with the catppuccin flavor of your choice. For example the mocha flavor:
+Adjust the Oh My Posh init line in `~/.config/fish/config.fish` by adding the `--config` flag with the catppuccin flavor of your choice.
 
 ```fish
 oh-my-posh init fish --config 'https://raw.githubusercontent.com/maxstolly/catppuccin.omp/main/mocha.omp.json' | source
@@ -97,7 +97,7 @@ Once altered, reload your config for the changes to take effect:
 <details>
 <summary>nushell</summary>
 
-Adjust the Oh My Posh init line in Nushell env file (`$nu.env-path`) by adding the `--config` flag with the catppuccin flavor of your choice. For example the mocha flavor:
+Adjust the Oh My Posh init line in Nushell env file (`$nu.env-path`) by adding the `--config` flag with the catppuccin flavor of your choice.
 
 ```nushell
 oh-my-posh init nu --config 'https://raw.githubusercontent.com/maxstolly/catppuccin.omp/main/mocha.omp.json'
@@ -125,7 +125,7 @@ source /mylocation/myscript.nu
 <details>
 <summary>powershell</summary>
 
-Adjust the Oh My Posh init line in your `$PROFILE` by adding the `--config` flag with the catppuccin flavor of your choice. For example the mocha flavor:
+Adjust the Oh My Posh init line in your `$PROFILE` by adding the `--config` flag with the catppuccin flavor of your choice.
 
 ```powershell
 oh-my-posh init pwsh --config 'https://raw.githubusercontent.com/maxstolly/catppuccin.omp/main/mocha.omp.json' | Invoke-Expression
@@ -149,7 +149,7 @@ In this scenario, it can also be that PowerShell blocks running local scripts. T
 <details>
 <summary>tcsh</summary>
 
-Adjust the Oh My Posh init line in `~/.tcshrc` by adding the `--config` flag with the catppuccin flavor of your choice. For example the mocha flavor:
+Adjust the Oh My Posh init line in `~/.tcshrc` by adding the `--config` flag with the catppuccin flavor of your choice.
 
 ```tcsh
 eval `oh-my-posh init tcsh --config 'https://raw.githubusercontent.com/maxstolly/catppuccin.omp/main/mocha.omp.json'`
@@ -165,7 +165,7 @@ exec tcsh
 <details>
 <summary>xonsh</summary>
 
-Adjust the Oh My Posh init line in `~/.xonshrc` by adding the `--config` flag with the catppuccin flavor of your choice. For example the mocha flavor:
+Adjust the Oh My Posh init line in `~/.xonshrc` by adding the `--config` flag with the catppuccin flavor of your choice.
 
 ```xonsh
 execx($(oh-my-posh init xonsh --config 'https://raw.githubusercontent.com/maxstolly/catppuccin.omp/main/mocha.omp.json'))
@@ -181,7 +181,7 @@ exec xonsh
 <details>
 <summary>zsh</summary>
 
-Adjust the Oh My Posh init line in `~/.zshrc` by adding the `--config` flag with the catppuccin flavor of your choice. For example the mocha flavor:
+Adjust the Oh My Posh init line in `~/.zshrc` by adding the `--config` flag with the catppuccin flavor of your choice.
 
 ```shell
 eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/maxstolly/catppuccin.omp/main/mocha.omp.json')"
