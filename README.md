@@ -11,6 +11,8 @@
 
 ## Previews
 
+> Font used is [JetBrainsMono Nerd Font](https://www.nerdfonts.com/)
+
 <details>
 <summary>🌻 Latte</summary>
 <img src="assets/latte.png"/>
