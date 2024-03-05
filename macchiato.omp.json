@@ -114,31 +114,31 @@
                     "type": "go",
                     "style": "plain",
                     "foreground": "p:go",
-                    "template": "\ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                    "template": "\ue627 {{ if not .Error }}{{ .Full }}{{ end }} "
                 },
                 {
                     "type": "haskell",
                     "style": "plain",
                     "foreground": "p:haskell",
-                    "template": "\ue61f {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                    "template": "\ue61f {{ if not .Error }}{{ .Full }}{{ end }} "
                 },
                 {
                     "type": "julia",
                     "style": "plain",
                     "foreground": "p:julia",
-                    "template": "\ue624 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                    "template": "\ue624 {{ if not .Error }}{{ .Full }}{{ end }} "
                 },
                 {
                     "type": "lua",
                     "style": "plain",
                     "foreground": "p:lua",
-                    "template": "\ue620 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                    "template": "\ue620 {{ if not .Error }}{{ .Full }}{{ end }} "
                 },
                 {
                     "type": "python",
                     "style": "plain",
                     "foreground": "p:python",
-                    "template": "\ue73c {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+                    "template": "\ue73c {{ if not .Error }}{{ .Full }}{{ end }} ",
                     "properties": {
                         "display_default": false,
                         "display_mode": "context"
@@ -148,7 +148,7 @@
                     "type": "rust",
                     "style": "plain",
                     "foreground": "p:rust",
-                    "template": "\ue7a8 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                    "template": "\ue7a8 {{ if not .Error }}{{ .Full }}{{ end }} "
                 },
                 {
                     "type": "executiontime",
