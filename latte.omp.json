@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
     "version": 2,
     "final_space": false,
-    "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+    "console_title_template": "{{ .Shell }} in {{ .PWD }}",
     "palette": {
         "rosewater": "#DC8A78",
         "flamingo": "#DD7878",
