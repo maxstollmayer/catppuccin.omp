@@ -139,7 +139,7 @@
                     "type": "python",
                     "style": "plain",
                     "foreground": "p:python",
-                    "template": "\ue73c {{ if not .Error }}{{ .Full }}{{ end }} ",
+                    "template": "\ue73c {{ if not .Error }}{{ if .Venv }}venv/{{ end }}{{ .Full }}{{ end }} ",
                     "properties": {
                         "display_default": false,
                         "display_mode": "context"
